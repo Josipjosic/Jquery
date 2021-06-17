@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vježba 6 - prijelom</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+		    $( "#datum-polaska" ).datepicker({
+			  dateFormat: "dd.mm.yy."
+			});
+			$( "#mojAccordion" ).accordion();
+		});
+	</script>
+	<div id="divTopBarWrap">
+		<div id="divTopBar">
+			<div id="divTopBarCol1">
+				<p>Kontakt telefon: 031/205-555</p>
+			</div>
+			<div id="divTopBarCol2">
+				<p>Kontakt email: info@edunova.hr</p>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divTopBarWrap -->
+	<div id="divMainMenuWrap">
+		<div id="divMainMenu">
+			<div id="divMainMenuCol1">
+				<h2>Edunova W29</h2>
+			</div>
+			<div id="divMainMenuCol2">
+				<ul class="mainMenu1">
+					<li><a href="#">Naslovna</a></li>
+					<li><a href="#">Usluge</a></li>
+					<li>
+						<a href="#">Proizvodi</a>
+						<ul>
+							<li><a href="#">Proizvod 1</a></li>
+							<li><a href="#">Proizvod 2</a></li>
+							<li><a href="#">Proizvod 3</a></li>
+							<li><a href="#">Proizvod 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Partneri</a></li>
+					<li><a href="#">O nama</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divMainMenuWrap -->
+	<div id="divHeaderWrap">
+		<div id="divHeader">
+			<h1>Edunova grupa W29</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labord do eiusmod
+			tempor incididunt ut labord do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<div class="divHeaderButtons">
+				<a href="#">Pročitajte više</a>
+				<a href="#">Naručite odmah</a>
+			</div>
+		</div>
+	</div><!-- end #divHeaderWrap -->
+	<div id="divContentSection1Wrap">
+		<div id="divContentSection1">
+			<ul class="listBoxStyle1">
+				<li class="gridCol3">
+					<h2>Prva box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+				<li class="gridCol3 listBoxStyle1Featured">
+					<h2>Druga box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+				<li class="gridCol3 gridLastItem">
+					<h2>Treća box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divContentSection1Wrap -->
+	<div id="divContentSection2Wrap">
+		<div id="divContentSection2">
+			<h1 class="SectionTitle1">jQuery UI</h1>
+			<p>Date: <input type="text" id="datum-polaska"></p>
+			<div id="mojAccordion">
+			  <h3>Section 1</h3>
+			  <div>
+			    <p>
+			    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+			    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+			    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+			    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+			    </p>
+			  </div>
+			  <h3>Section 2</h3>
+			  <div>
+			    <p>
+			    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+			    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+			    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+			    suscipit faucibus urna.
+			    </p>
+			  </div>
+			  <h3>Section 3</h3>
+			  <div>
+			    <p>
+			    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+			    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+			    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+			    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+			    </p>
+			    <ul>
+			      <li>List item one</li>
+			      <li>List item two</li>
+			      <li>List item three</li>
+			    </ul>
+			  </div>
+			  <h3>Section 4</h3>
+			  <div>
+			    <p>
+			    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+			    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+			    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+			    mauris vel est.
+			    </p>
+			    <p>
+			    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+			    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+			    inceptos himenaeos.
+			    </p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- end #divContentSection2Wrap -->
+	<div id="divContentSection3Wrap">
+		<div id="divContentSection3">
+			<h1 class="SectionTitle1">Istaknute novosti</h1>
+			<div class="gridCol3">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div class="gridCol3">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div class="gridCol3 gridLastItem">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divContentSection3Wrap -->
+	<div id="divFooterWrap">
+		<div id="divFooter">
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+				</ul>
+			</div>
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+				</ul>
+			</div>
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul class="footerLinks">
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+				</ul>
+			</div>
+			<div class="gridCol4 gridLastItem">
+				<h3>Podnožje Stupac</h3>
+				<ul class="footerGallery">
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divFooterWrap -->
+</body>
+</html>

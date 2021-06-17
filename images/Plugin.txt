@@ -1,0 +1,4 @@
+1. linkamo fajlove u html dokumentu
+2. dodajemo markup u nas html file
+3. pomocu js-a povezujemo skriptu i dodani markup kod
+4. uredujemo properties od linkane skripte

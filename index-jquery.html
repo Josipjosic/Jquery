@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vježba 6 - prijelom</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/js-funkcije.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<div id="divTopBarWrap">
+		<div id="divTopBar">
+			<div id="divTopBarCol1">
+				<p>Kontakt telefon: 031/205-555</p>
+			</div>
+			<div id="divTopBarCol2">
+				<p>Kontakt email: info@edunova.hr</p>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divTopBarWrap -->
+	<div id="divMainMenuWrap">
+		<div id="divMainMenu">
+			<div id="divMainMenuCol1">
+				<h2>Edunova W29</h2>
+			</div>
+			<div id="divMainMenuCol2">
+				<ul class="mainMenu1">
+					<li><a href="#">Naslovna</a></li>
+					<li><a href="#">Usluge</a></li>
+					<li>
+						<a href="#">Proizvodi</a>
+						<ul>
+							<li><a href="#">Proizvod 1</a></li>
+							<li><a href="#">Proizvod 2</a></li>
+							<li><a href="#">Proizvod 3</a></li>
+							<li><a href="#">Proizvod 4</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Partneri</a></li>
+					<li><a href="#">O nama</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divMainMenuWrap -->
+	<div id="divHeaderWrap">
+		<div id="divHeader">
+			<h1>Edunova grupa W29</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labord do eiusmod
+			tempor incididunt ut labord do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<div class="divHeaderButtons">
+				<a href="#">Pročitajte više</a>
+				<a href="#">Naručite odmah</a>
+			</div>
+		</div>
+	</div><!-- end #divHeaderWrap -->
+	<div id="divContentSection1Wrap">
+		<div id="divContentSection1">
+			<ul class="listBoxStyle1">
+				<li class="gridCol3">
+					<h2>Prva box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+				<li class="gridCol3 listBoxStyle1Featured">
+					<h2>Druga box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+				<li class="gridCol3 gridLastItem">
+					<h2>Treća box stavka</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut .</p>
+					<a href="#">Više</a>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divContentSection1Wrap -->
+	<div id="divContentSection2Wrap">
+		<div id="divContentSection2">
+			<h1 class="SectionTitle1">Javascript funkcija i event</h1>
+			<div class="divJsTest">
+				<ul>
+					<li onclick="ispis('Varijable mogu biti lokalne i globalne','Varijable primaju različite tipove podataka i imaju različiti scope')">Varijable</li>
+					<li onclick="ispis('Najpoznatiji tipovi podataka','Integer, String, Array, Date, Decimal, Boolean')">Tipovi podataka</li>
+					<li onmouseover="ispis('Tipovi operatora','Aritmetički, Logički...')">Operatori</li>
+					<li>Petlje</li>
+					<li>Uvjeti</li>
+				</ul>
+				<div id="divRez">
+					<h2>Ovo je neki naslov</h2>
+					<p>Ovo je neki odlomak</p>
+				</div>
+				<h1 class="SectionTitle1">Javascript kontrola obrazci</h1>
+				<form id="obrazac1" method="get" action="">
+					<p>
+						<label for="txt1">Polje 1</label>
+						<input id="txt1" name="txt1" type="text" value="Neka vrijednost" onfocus="if(this.value != '') this.value = ''">
+					</p>
+					<p>
+						<label for="txt2">Polje 2</label>
+						<input id="txt2" name="txt2" type="text" value="">
+					</p>
+					<p><input id="btt1" name="btt1" type="button" value="Izračun"></p>
+					<p><input id="btt2" name="btt2" type="button" value="Dodaj klasu"></p>
+					<p><input id="btt3" name="btt3" type="button" value="Prikaži/sakrij"></p>
+					<p><input id="btt4" name="btt4" type="button" value="Dodaj/Oduzmi klasu"></p>
+					<p><input id="btt5" name="btt5" type="button" value="Slide in"></p>
+					<p><input id="btt6" name="btt6" type="button" value="Animate"></p>
+					<p><input id="btt7" name="btt7" type="button" value="Style"></p>
+					<div id="divRez2"></div>
+					<script type="text/javascript">
+						/*function izracun(){
+							var txt1 = document.getElementById('txt1').value;
+							var txt2 = document.getElementById('txt2').value;
+							var rez = parseInt(txt1) + parseInt(txt2);
+							if(rez > 20){
+								document.getElementById('divRez2').style.backgroundColor='red';
+							}else{
+								document.getElementById('divRez2').style.backgroundColor='#c3c3c3';
+							}
+							document.getElementById('divRez2').innerHTML = rez;
+						}*/
+						$('#btt1').click(function(){
+							var txt1 = $('#txt1').val();
+							var txt2 = $('#txt2').val();
+							var rez = parseInt(txt1) + parseInt(txt2);
+							if(rez==15){
+								$('#divRez2').hide();
+							}
+							$('#divRez2').html(rez);
+						});
+						$('#btt2').click(function(){
+							var nazivKlase = $('#txt1').val();
+							if(nazivKlase!=''){
+								$('#divRez2').show('slow');
+								$('#divRez2').html(nazivKlase);
+								$('#divRez2').addClass(nazivKlase);
+							}else{
+								$('#txt1').css({
+									backgroundColor: 'red',
+									color: '#ffffff',
+									border: 'solid 1px #000000'
+								});
+								$('#divRez2').html('Molimo unesite naziv klase u polje 1');
+								$('#divRez2').removeClass();
+							}
+						});
+						$('#txt1').keyup(function(){
+							if($('#txt1').val()!=''){
+								$('#txt1').removeAttr( 'style' );
+							}else{
+								$('#txt1').css({
+									backgroundColor: 'red',
+									color: '#ffffff',
+									border: 'solid 1px #000000'
+								});
+							}
+						});
+						$('#btt3').click(function(){
+							$('#divRez').toggle('slow');
+							$('#btt3').attr('class','neka-klasa');
+							$(this).attr('title','Moj Button');
+							$('#divRez a, #divRez p').attr('href','nekiurl');
+						});
+						$('#btt4').click(function(){
+							$('#divRez').toggleClass('error');
+						});
+						//Na klik btt5 da se divRez2 slideDown napravi 
+						$('#btt5').click(function(){
+							$('#divRez').slideDown('slow');
+						});
+						/*$( "#bttNeki" ).click(function() {
+						  $( "#divRez" ).animate('left','+=50');
+						});*/
+						$( "#btt6" ).click(function() {
+						  $( "#divRez" ).animate({
+						    opacity: 0.25,
+						    left: "+=50",
+						    height: "toggle"
+						  }, 5000, function() {
+						    // Animation complete.
+						  });
+						});
+						$( "#btt7" ).click(function() {
+						  $( "#divRez" ).css({
+						    backgroundColor: '#c3c3c3',
+						    height: "500px"
+						  });
+						});
+					</script>
+				</form>
+			</div>
+		</div>
+	</div><!-- end #divContentSection2Wrap -->
+	<div id="divContentSection3Wrap">
+		<div id="divContentSection3">
+			<h1 class="SectionTitle1">Istaknute novosti</h1>
+			<div class="gridCol3">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div class="gridCol3">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div class="gridCol3 gridLastItem">
+				<img src="https://via.placeholder.com/350">
+				<h2>Istaknuta usluga 6</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				<a href="#">Pročitajte više</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divContentSection3Wrap -->
+	<div id="divFooterWrap">
+		<div id="divFooter">
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+				</ul>
+			</div>
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+					<li>Stavka podnožja 1</li>
+				</ul>
+			</div>
+			<div class="gridCol4">
+				<h3>Podnožje Stupac</h3>
+				<ul class="footerLinks">
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+					<li><a href="#">Stavka podnožja 1</a></li>
+				</ul>
+			</div>
+			<div class="gridCol4 gridLastItem">
+				<h3>Podnožje Stupac</h3>
+				<ul class="footerGallery">
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3"><img src="https://via.placeholder.com/150"></li>
+					<li class="gridCol3 gridLastItem"><img src="https://via.placeholder.com/150"></li>
+				</ul>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div><!-- end #divFooterWrap -->
+</body>
+</html>
